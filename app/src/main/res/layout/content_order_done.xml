@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_reservation_done"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.octarine.plove.order.OrderDoneActivity"
+    tools:showIn="@layout/activity_order_done"
+    android:background="#ffffff">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rl1"
+        android:paddingTop="22dp"
+        android:paddingBottom="16dp"
+        android:paddingRight="24dp"
+        android:paddingLeft="16dp">
+
+        <TextView
+            android:text="@string/order_done_ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewOrderResult"
+            style="@style/FormTitles" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/rl2"
+        android:background="#c0c0c0"
+        android:layout_below="@+id/rl1">
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rl5"
+        android:layout_below="@+id/rl2"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:paddingRight="24dp">
+
+        <TextView
+            android:id="@+id/textView18"
+            style="@style/FormTitles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Время:" />
+
+        <TextView
+            android:text="~ 30 минут"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewDeliveryTime"
+            android:layout_alignParentRight="true"
+            style="@style/FormTitles" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/rl6"
+        android:background="#c0c0c0"
+        android:layout_below="@+id/rl5">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rl7"
+        android:layout_below="@+id/rl6"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:paddingRight="24dp">
+
+        <TextView
+            android:text="@string/label_persons_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView20"
+            style="@style/FormTitles" />
+
+        <TextView
+            android:id="@+id/textViewPersonsCount"
+            style="@style/FormTitles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="1" />
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_below="@+id/rl7" />
+</RelativeLayout>

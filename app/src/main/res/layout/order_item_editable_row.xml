@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rl1"
+        android:padding="11dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/editTextTitle"
+            android:singleLine="true"
+            android:selectAllOnFocus="false"
+            android:hint="Placeholder"
+            android:theme="@style/MyEditTextTheme"
+            style="@style/OrderEditTextText"
+            android:layout_toLeftOf="@+id/imageButtonCheck"
+            android:inputType="text"
+            android:background="@drawable/input_normal_bg" />
+
+        <TextView
+            android:text="Поле обязательно к заполнению"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewAlert"
+            android:layout_below="@+id/editTextTitle"
+            android:layout_alignParentRight="true"
+            android:textStyle="normal|italic"
+            android:textSize="10sp"
+            android:textColor="@color/plove_red"
+            android:layout_marginTop="5dp"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/accepted"
+            android:id="@+id/imageButtonCheck"
+            android:background="#00ffffff"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/rl2"
+        android:background="#c0c0c0"
+        android:layout_below="@+id/rl1"
+        android:layout_height="0dp">
+
+    </RelativeLayout>
+
+</RelativeLayout>

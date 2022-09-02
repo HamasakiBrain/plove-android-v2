@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_auth"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.octarine.plove.auth.AuthActivity"
+    tools:showIn="@layout/activity_auth">
+
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/welcome" />
+
+    <TextView
+        style="@style/HeadTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView4"
+        android:layout_marginBottom="24dp"
+        android:layout_marginLeft="24dp"
+        android:text="Пожалуйста\nавторизируйтесь" />
+
+    <RelativeLayout
+        android:id="@+id/authBlock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentTop="false"
+        android:layout_below="@+id/imageView4"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="false"
+            android:layout_marginTop="38dp">
+
+            <RelativeLayout
+                android:id="@+id/loginRowOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView">
+
+                <com.vicmikhailau.maskededittext.MaskedEditText
+                    android:id="@+id/editTextLogin"
+                    style="@style/InputText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginRight="60dp"
+                    android:layout_toRightOf="@+id/imageViewLoginIcon"
+                    android:background="#ffffff"
+                    android:hint="@string/login_placeholder"
+                    android:inputType="phone"
+                    android:theme="@style/MyEditTextTheme"
+                    app:mask="+7(###)###-##-##" />
+
+                <ImageView
+                    android:id="@+id/imageViewLoginIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/editTextLogin"
+                    android:layout_alignTop="@+id/editTextLogin"
+                    android:layout_marginLeft="27dp"
+                    app:srcCompat="@drawable/phone_icon" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/loginRowTwo"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/loginRowOne"
+                android:layout_marginLeft="64dp"
+                android:layout_marginRight="33dp"
+                android:layout_marginTop="18dp"
+                android:background="@color/greyish">
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/loginRowThree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/loginRowTwo"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/imageViewPasswordIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/editTextPassword"
+                    android:layout_alignParentRight="false"
+                    android:layout_alignTop="@+id/editTextPassword"
+                    android:layout_marginLeft="27dp"
+                    app:srcCompat="@drawable/pass_icon" />
+
+                <EditText
+                    android:id="@+id/editTextPassword"
+                    style="@style/InputText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginRight="60dp"
+                    android:layout_toRightOf="@+id/imageViewPasswordIcon"
+                    android:background="#ffffff"
+                    android:hint="@string/password_placeholder"
+                    android:inputType="textPassword"
+                    android:password="true"
+                    android:theme="@style/MyEditTextTheme" />
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/buttonAuth"
+            style="@style/RedButtonText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/block"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="30dp"
+            android:background="@color/pinkish_orange"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/auth_btn" />
+
+        <RelativeLayout
+            android:id="@+id/loginRowFour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+
+            <Button
+                android:id="@+id/buttonReg"
+                style="@style/Reg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/regGuestDivider"
+                android:background="#ffffff"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/reg_btn"
+                android:textSize="12sp" />
+
+            <RelativeLayout
+                android:id="@+id/regGuestDivider"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/textViewLostPassword"
+                style="@style/Reg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/regGuestDivider"
+                android:background="#ffffff"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/btnLostPassword"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+    <resources>
+        <color name="colorPrimary">#373447</color>
+        <color name="colorPrimaryDark">#312e40</color>
+        <color name="colorAccent">#ff623a</color>
+    
+        <color name="plove_red">#b50606</color>
+        <color name="greyish">#b1b1b1</color>
+        <color name="lipstick">#cf2022</color>
+        <color name="white_68">#adffffff</color>
+        <color name="greyish_two">#a6a6a6</color>
+        <color name="white_60">#99ffffff</color>
+        <color name="white_three">#f8f8f8</color>
+        <color name="white_four">#fafafa</color>
+        <color name="order_selected_item">#eeeeee</color>
+        <color name="order_item_placeholder">#9b9b9b</color>
+        <color name="order_item_text">#333333</color>
+
+        <color name="white">#ffffff</color>
+        <color name="black">#212121</color>
+        <color name="warm_grey">#9e9e9e</color>
+        <color name="black_two">#000000</color>
+        <color name="black_two_38">#60000000</color>
+        <color name="black_two_87">#dd000000</color>
+        <color name="white_87">#ddffffff</color>
+        <color name="pinkish_orange">#ff623a</color>
+        <color name="orange">#fa6e04</color>
+        <color name="black_two_54">#89000000</color>
+        <color name="white_two">#e9e9e9</color>
+        <color name="orange_red">#ff5722</color>
+        <color name="cool_grey">#999fae</color>
+        <color name="warm_grey_two">#757575</color>
+        <color name="cool_grey_two">#929294</color>
+        <color name="black_three">#0c0c0c</color>
+        <color name="charcoal_grey">#373447</color>
+        <color name="pale_grey">#e9ebf1</color>
+    </resources>
+

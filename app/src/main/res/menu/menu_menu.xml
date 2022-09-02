@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:iloveplove.octarine.com ="http://schemas.android.com/apk/res-auto"
+    tools:context="com.octarine.plove.MainActivity">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="200"
+        android:title="@string/action_settings"
+        android:icon="@drawable/settings"
+        iloveplove.octarine.com:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_messenger"
+        android:orderInCategory="100"
+        android:icon="@drawable/mail"
+        android:title="@string/action_messenger"
+        iloveplove.octarine.com:showAsAction="always"/>
+</menu>

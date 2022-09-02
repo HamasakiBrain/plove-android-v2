@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rl1"
+        android:padding="16dp">
+
+        <TextView
+            android:text="@string/pay_by_points"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewDesc"
+            android:textStyle="normal|italic" />
+
+        <SeekBar
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="0"
+            android:progress="0"
+            android:theme="@style/MySeekBarTheme"
+            android:id="@+id/seekBar"
+            android:layout_below="@+id/textViewDesc"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewItem"
+            style="@style/ReservAddress"
+            android:layout_below="@+id/seekBar"
+            android:layout_marginTop="15dp" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewItemValue"
+            style="@style/OrderEditTextPlaceholder"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/textViewItem"
+            android:textDirection="ltr"
+            android:layout_marginLeft="15dp"
+            android:ellipsize="end"
+            android:layout_below="@+id/seekBar"
+            android:layout_marginTop="15dp"
+            android:gravity="right" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/rl2"
+        android:background="#c0c0c0"
+        android:layout_below="@+id/rl1"
+        android:layout_height="0dp">
+
+    </RelativeLayout>
+
+</RelativeLayout>

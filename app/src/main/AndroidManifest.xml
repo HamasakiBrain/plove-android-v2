@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.octarine.plove">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <application
+        android:name="com.octarine.plove.app.ApplicationController"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.octarine.plove.auth.AuthActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.octarine.plove.MainActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.octarine.plove.menu.MenuActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_menu"
+            android:launchMode="singleTask"
+            android:parentActivityName="com.octarine.plove.catalog.CategoryActivity"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.octarine.plove.catalog.CategoryActivity" />
+        </activity>
+        <activity
+            android:name="com.octarine.plove.registration.RegisterStep1Activity"
+            android:configChanges="orientation"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.octarine.plove.registration.RegisterLinkCardActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.octarine.plove.registration.RegisterStep2Activity"
+            android:configChanges="orientation"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.octarine.plove.registration.RegisterStep3Activity"
+            android:configChanges="orientation"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.octarine.plove.lost.LostPasswordStep1Activity"
+            android:configChanges="orientation"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.octarine.plove.lost.PinValidateActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.octarine.plove.cafes.OpenCafeActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_open_cafe"
+            android:parentActivityName="com.octarine.plove.MainActivity"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.octarine.plove.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.octarine.plove.profile.OpenSaleActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_open_sale"
+            android:parentActivityName="com.octarine.plove.MainActivity"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.octarine.plove.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.octarine.plove.menu.MenuSearchActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_menu_search"
+            android:parentActivityName="com.octarine.plove.menu.MenuActivity"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.octarine.plove.menu.MenuActivity" />
+        </activity>
+        <activity
+            android:name="com.octarine.plove.menu.MenuItemActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_menu_item"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.octarine.plove.bag.BagActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_bag"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.octarine.plove.reservation.ReservationSelectCafeActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_reservation_select_cafe"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.octarine.plove.reservation.ReservationProfileActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_reservation_profile"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.octarine.plove.reservation.TakeAwayTimeActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_select_time"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.octarine.plove.reservation.ReservationDoneActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_reservation_done"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.octarine.plove.qr.ScannerActivity" />
+        <activity
+            android:name="com.octarine.plove.order.OrderStep1Activity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_order_step1"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.octarine.plove.order.OrderAddressActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_order_step1"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.octarine.plove.order.OrderStep3Activity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_order_step3"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.octarine.plove.order.OrderStepResumeActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_order_step4"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.octarine.plove.qr.OrderQRActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_order_qr"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.octarine.plove.order.OrderPayQRActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_order_qr"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.octarine.plove.pay.WebViewActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_web_view"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.octarine.plove.pay.QRWebViewActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_web_view"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.octarine.plove.order.OrderDoneActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_order_done"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.octarine.plove.settings.OptionsActivity"
+            android:label="@string/title_activity_options"
+            android:parentActivityName="com.octarine.plove.MainActivity"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.octarine.plove.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.octarine.plove.profile.ProfileActivity"
+            android:label="@string/title_activity_profile"
+            android:parentActivityName="com.octarine.plove.settings.OptionsActivity"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.octarine.plove.settings.OptionsActivity" />
+        </activity>
+        <activity
+            android:name="com.octarine.plove.SplashActivity"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/SplashTheme"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.octarine.plove.catalog.CategoryActivity"
+            android:label="@string/title_activity_category"
+            android:parentActivityName="com.octarine.plove.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.octarine.plove.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.octarine.plove.pay.WebActivity"
+            android:label="@string/title_activity_web"
+            android:parentActivityName="com.octarine.plove.settings.OptionsActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.octarine.plove.settings.OptionsActivity" />
+        </activity>
+        <activity android:name="com.octarine.plove.feedback.FeedbackActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.octarine.plove.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>

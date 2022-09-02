@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="1dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop="8dp"
+    android:id="@+id/card_sale">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:srcCompat="@drawable/akciya_placeholder"
+            android:id="@+id/imageViewSale"
+            android:scaleType="centerCrop" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/saleRow"
+            android:layout_below="@+id/imageViewSale"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                card_view:srcCompat="@drawable/dot"
+                android:id="@+id/imageView6"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp" />
+
+            <TextView
+                android:text="С 31 Февраля новое фитнес меню."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewSalePreview"
+                android:layout_below="@+id/textViewSaleTitle1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="7dp"
+                style="@style/SalePreview"
+                android:textAllCaps="true" />
+
+            <TextView
+                android:text="ХУДЕЕМ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewSaleTitle1"
+                android:layout_marginLeft="20dp"
+                style="@style/SaleTitleBlack"
+                android:textAllCaps="true" />
+
+            <TextView
+                android:text="ВМЕСТЕ!"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewSaleTitle2"
+                android:layout_toRightOf="@+id/textViewSaleTitle1"
+                android:layout_marginLeft="5dp"
+                style="@style/SaleTitleRed"
+                android:textAllCaps="true"
+                android:layout_toLeftOf="@+id/imageView6"
+                android:layout_marginRight="5dp"
+                android:ellipsize="end"
+                android:lines="1"
+                android:maxLines="1" />
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

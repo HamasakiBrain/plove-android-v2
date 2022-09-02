@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="1dp"
+    android:layout_marginBottom="0dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginTop="16dp"
+    android:id="@+id/history_card">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/historyRow2"
+            android:layout_below="@+id/textViewHistoryDate"
+            android:layout_marginTop="13dp"
+            android:background="@color/white_three">
+
+            <TextView
+                android:text="2340 руб"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewHistorySummValue"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                style="@style/HistorySummValue"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:text="-1500 баллов"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewHistoryPoints"
+                android:layout_marginLeft="19dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginBottom="17dp"
+                style="@style/HistoryPointsOff"
+                android:layout_alignParentRight="false"
+                android:textSize="12sp" />
+
+            <TextView
+                android:text="Сумма"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewHistorySummTitle"
+                style="@style/HistorySumm"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/textViewHistorySummValue"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:text="Казань, Гоголя 24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewHistoryGeo"
+            android:layout_toLeftOf="@+id/imageViewHistoryDot"
+            android:layout_marginTop="19dp"
+            android:layout_marginRight="22dp"
+            style="@style/HistoryGeo"
+            android:textSize="12sp"
+            android:layout_toRightOf="@+id/textViewHistoryDate"
+            android:elevation="13dp"
+            android:ellipsize="end"
+            android:lines="1" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            card_view:srcCompat="@drawable/dot"
+            android:id="@+id/imageViewHistoryDot"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="16dp" />
+
+        <TextView
+            android:text="23 Ноябрь 2016, 23:31"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewHistoryDate"
+            android:layout_marginLeft="19dp"
+            android:layout_marginTop="19dp"
+            style="@style/HistoryDate"
+            android:textSize="12sp" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

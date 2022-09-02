@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_auth"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.octarine.plove.registration.RegisterPinValidateActivity"
+    tools:showIn="@layout/activity_reg_sms">
+
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/welcome" />
+
+    <Button
+        android:id="@+id/buttonNext"
+        style="@style/RedButtonText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/pinkish_orange"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/btn_next" />
+
+    <TextView
+        style="@style/HeadTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView4"
+        android:layout_marginBottom="24dp"
+        android:layout_marginLeft="24dp"
+        android:text="Регистрация" />
+
+    <RelativeLayout
+        android:id="@+id/authBlock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentTop="false"
+        android:layout_below="@+id/imageView4"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/Subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="50dp"
+            android:text="@string/check_code"
+            android:textAllCaps="false"
+            android:theme="@style/Titles" />
+
+        <RelativeLayout
+            android:id="@+id/block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView"
+            android:layout_centerVertical="false">
+
+            <RelativeLayout
+                android:id="@+id/loginRowOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <ImageView
+                    android:id="@+id/imageViewLoginIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/editTextLogin"
+                    android:layout_alignTop="@+id/editTextLogin"
+                    android:layout_marginLeft="28dp"
+                    app:srcCompat="@drawable/pass_icon" />
+
+                <com.vicmikhailau.maskededittext.MaskedEditText
+                    android:id="@+id/editTextLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_toRightOf="@+id/imageViewLoginIcon"
+                    android:hint="@string/code_placeholder"
+                    android:inputType="numberDecimal" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

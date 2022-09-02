@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.octarine.plove.profile.ProfileActivity"
+    tools:showIn="@layout/activity_profile"
+    android:background="#ffffff">
+
+
+    <RelativeLayout
+        android:id="@+id/loginRowName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/imageViewLoginIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/editTextLastName"
+            android:layout_alignTop="@+id/editTextLastName"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="62dp"
+            app:srcCompat="@drawable/user" />
+
+        <EditText
+            android:id="@+id/editTextLastName"
+            style="@style/InputText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="60dp"
+            android:layout_toRightOf="@+id/imageViewLoginIcon"
+            android:background="#ffffff"
+            android:hint="@string/username"
+            android:inputType="textPersonName"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:theme="@style/MyEditTextTheme" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/loginRowDivider1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/loginRowName"
+        android:layout_marginLeft="33dp"
+        android:layout_marginRight="33dp"
+        android:background="@color/greyish">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/loginRowLastname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loginRowDivider1">
+
+        <ImageView
+            android:id="@+id/imageViewLoginIcon2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/editTextFirstName"
+            android:layout_alignTop="@+id/editTextFirstName"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="62dp"
+            app:srcCompat="@drawable/user" />
+
+        <EditText
+            android:id="@+id/editTextFirstName"
+            style="@style/InputText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="60dp"
+            android:layout_toRightOf="@+id/imageViewLoginIcon2"
+            android:background="#ffffff"
+            android:hint="@string/user_lastname"
+            android:inputType="textPersonName"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:theme="@style/MyEditTextTheme" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/loginRowDivider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/loginRowLastname"
+        android:layout_marginLeft="33dp"
+        android:layout_marginRight="33dp"
+        android:background="@color/greyish">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/loginRowBirthDay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loginRowDivider2"
+        android:layout_marginTop="0dp">
+
+        <ImageView
+            android:id="@+id/imageViewLoginIcon3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/editTextLogin"
+            android:layout_alignTop="@+id/editTextLogin"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="62dp"
+            app:srcCompat="@drawable/date" />
+
+
+        <com.vicmikhailau.maskededittext.MaskedEditText
+            android:id="@+id/editTextBDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/user_birthday"
+            android:inputType="number|textNoSuggestions"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="60dp"
+            android:layout_toRightOf="@+id/imageViewLoginIcon3"
+            android:background="#ffffff"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:theme="@style/MyEditTextTheme"
+            app:mask="##.##.####" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/loginRowDivider3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/loginRowBirthDay"
+        android:layout_marginLeft="33dp"
+        android:layout_marginRight="33dp"
+        android:layout_marginTop="0dp"
+        android:background="@color/greyish">
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textViewSex"
+        style="@style/Titles"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loginRowDivider3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="@string/set_your_sex"
+        android:textAllCaps="true"
+        android:theme="@style/Titles" />
+
+    <RelativeLayout
+        android:id="@+id/sexBlock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewSex"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp"
+        android:layout_marginTop="20dp"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/textView13"
+            style="@style/Titles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:layout_toLeftOf="@+id/imageViewWCheck"
+            android:text="@string/sex_woman"
+            android:textAllCaps="true" />
+
+        <ImageView
+            android:id="@+id/imageViewWCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            app:srcCompat="@drawable/radiobutton_off" />
+
+        <TextView
+            android:id="@+id/textView12"
+            style="@style/Titles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/imageViewMCheck"
+            android:text="@string/sex_man"
+            android:textAllCaps="true" />
+
+        <ImageView
+            android:id="@+id/imageViewMCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/radiobutton_on" />
+
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/buttonNext"
+        style="@style/RedButtonText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="false"
+        android:layout_below="@+id/sexBlock"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/pinkish_orange"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/btn_save_title" />
+
+</RelativeLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_menu"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginTop="8dp"
+    card_view:cardCornerRadius="4dp">
+
+
+    <RelativeLayout
+        android:id="@+id/card_menu_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/imageViewMenuItemImg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#333333"
+            android:scaleType="centerCrop"
+            card_view:srcCompat="@drawable/big" />
+
+        <RelativeLayout
+            android:id="@+id/saleRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageViewMenuItemImg"
+            android:background="#fff">
+
+
+            <TextView
+                android:id="@+id/textViewMenuItemTitle"
+                style="@style/ListTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Шурпа с бараниной" />
+
+            <TextView
+                android:id="@+id/textViewMenuItemPreview"
+                style="@style/ListContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewMenuItemTitle"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Это наше инновационное решение, которое  может экономить ваше время" />
+
+            <TextView
+                android:id="@+id/textViewMenuItemPrice"
+                style="@style/TotalValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewMenuItemPreview"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="1030 RUB" />
+
+            <Button
+                android:id="@+id/buyBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="false"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textViewMenuItemPreview"
+                android:layout_marginRight="16dp"
+                android:background="#00ffffff"
+                android:text="В КОРЗИНУ"
+                android:textColor="@color/pinkish_orange" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

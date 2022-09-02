@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_auth"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.octarine.plove.registration.RegisterLinkCardActivity"
+    tools:showIn="@layout/activity_register_link">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/welcome" />
+
+    <TextView
+        style="@style/HeadTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView4"
+        android:layout_marginBottom="24dp"
+        android:layout_marginLeft="24dp"
+        android:text="Регистрация" />
+
+    <RelativeLayout
+        android:id="@+id/authBlock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentTop="false"
+        android:layout_below="@+id/imageView4"
+        android:background="@color/white">
+
+        <EditText
+            android:id="@+id/editTextFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="31dp"
+            android:hint="Номер карты"
+            android:inputType="textPersonName" />
+
+        <com.vicmikhailau.maskededittext.MaskedEditText
+            android:id="@+id/editTextBDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextFirstName"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:hint="@string/user_birthday"
+            android:inputType="number|textNoSuggestions"
+            app:mask="##.##.####" />
+
+        <Button
+            android:id="@+id/buttonNoCard"
+            style="@style/RedButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextBDay"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@color/pinkish_orange"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="  У меня нет карты  " />
+
+        <Button
+            android:id="@+id/buttonNext"
+            style="@style/RedButtonText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="false"
+            android:background="@color/pinkish_orange"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/btn_next" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.octarine.plove.menu.MenuActivity"
+    android:id="@+id/card_menu_item"
+    android:background="#ffffff">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#cccccc"
+        android:layout_below="@+id/textViewMenuItemPreview"
+        android:layout_marginTop="25dp"
+        android:layout_height="0dp">
+
+    </RelativeLayout>
+
+    <TextView
+        android:text="Preview Preview Preview Preview Preview Preview Preview Preview Preview Preview Preview Preview Preview Preview Preview  "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewMenuItemPreview"
+        android:layout_below="@+id/textViewMenuItemTitle"
+        android:layout_toLeftOf="@+id/textViewMenuItemBlock"
+        android:layout_toRightOf="@+id/imageViewMenuItemImg"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="8dp"
+        style="@style/MenuItemPreview"
+        android:layout_marginRight="10dp"
+        android:textAllCaps="true"
+        android:ellipsize="end"
+        android:maxLines="3" />
+
+        <RelativeLayout
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewMenuItemBlock"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="25dp"
+            android:layout_width="90dp"
+            android:gravity="right">
+            <TextView
+                android:text="100 RUB"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewMenuItemPrice"
+                style="@style/MenuItemPrice"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="false"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/food_menu_placeholder"
+        android:id="@+id/imageViewMenuItemImg"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="16dp" />
+
+    <TextView
+        android:text="Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewMenuItemTitle"
+        android:layout_toRightOf="@+id/imageViewMenuItemImg"
+        android:layout_marginLeft="13dp"
+        android:maxLines="2"
+        android:layout_toLeftOf="@+id/textViewMenuItemBlock"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="8dp"
+        style="@style/MenuItemTitle"
+         />
+</RelativeLayout>

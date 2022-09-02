@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_auth"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.octarine.plove.registration.RegisterStep3Activity"
+    tools:showIn="@layout/activity_register_step3">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/welcome" />
+
+    <TextView
+        style="@style/HeadTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView4"
+        android:layout_marginBottom="24dp"
+        android:layout_marginLeft="24dp"
+        android:text="Регистрация" />
+
+    <RelativeLayout
+        android:id="@+id/authBlock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentTop="false"
+        android:layout_below="@+id/imageView4"
+        android:background="@color/white">
+
+        <EditText
+            android:id="@+id/editTextFirstName"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="31dp"
+            android:hint="@string/user_lastname"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/editTextLastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="31dp"
+            android:layout_toRightOf="@+id/editTextFirstName"
+            android:hint="@string/username"
+            android:inputType="textPersonName" />
+
+        <com.vicmikhailau.maskededittext.MaskedEditText
+            android:id="@+id/editTextBDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextFirstName"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_toRightOf="@+id/imageViewLoginIcon3"
+            android:hint="@string/user_birthday"
+            android:inputType="number|textNoSuggestions"
+            app:mask="##.##.####" />
+
+        <RelativeLayout
+            android:id="@+id/rl1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextBDay"
+            android:layout_centerVertical="false">
+
+            <TextView
+                android:id="@+id/textViewSex"
+                style="@style/InputLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="false"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/set_your_sex"
+                android:textAllCaps="false"
+                android:theme="@style/Titles" />
+
+            <RelativeLayout
+                android:id="@+id/sexBlock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewSex"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginTop="8dp"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/textView13"
+                    style="@style/Titles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_toRightOf="@+id/imageViewWCheck"
+                    android:text="@string/sex_woman"
+                    android:textAllCaps="true" />
+
+                <ImageView
+                    android:id="@+id/imageViewWCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="false"
+                    android:layout_marginLeft="16dp"
+                    android:layout_toRightOf="@+id/textView12"
+                    app:srcCompat="@drawable/radiobutton_off" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    style="@style/Titles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_toRightOf="@+id/imageViewMCheck"
+                    android:text="@string/sex_man"
+                    android:textAllCaps="true" />
+
+                <ImageView
+                    android:id="@+id/imageViewMCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/radiobutton_on" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/buttonNext"
+            style="@style/RedButtonText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="false"
+            android:background="@color/pinkish_orange"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/btn_next" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
