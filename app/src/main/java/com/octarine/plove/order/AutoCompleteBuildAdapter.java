@@ -26,7 +26,7 @@ import java.util.ArrayList;
 class AutoCompleteBuildAdapter extends ArrayAdapter<String> implements Filterable {
     private ArrayList<Address> data;
     private String selectedStreetId = "";
-    private final String server = "https://crm.jetflix.ru/api/kladrBuild?streetId=";
+    private final String server = "https://rustam.iloveplove.ru/api/kladrBuild?streetId=";
 
     AutoCompleteBuildAdapter(@NonNull Context context, @LayoutRes int resource) {
         super(context, resource);

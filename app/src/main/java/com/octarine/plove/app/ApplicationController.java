@@ -36,7 +36,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ApplicationController extends Application {
 
     public static final String TAG = "Application";
-    private static final String API_URL = "https://crm.jetflix.ru/";
+    private static final String API_URL = "https://rustam.iloveplove.ru/";
     private static Api mApi;
     private static ApplicationController sInstance;
     private ProgressDialog progressDialog;

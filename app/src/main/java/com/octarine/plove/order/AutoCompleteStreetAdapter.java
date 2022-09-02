@@ -25,7 +25,7 @@ import java.util.ArrayList;
 
 class AutoCompleteStreetAdapter extends ArrayAdapter<String> implements Filterable {
     private ArrayList<Address> data;
-    private final String server = "https://crm.jetflix.ru/api/kladrStreet?street=";
+    private final String server = "https://rustam.iloveplove.ru/api/kladrStreet?street=";
 
     AutoCompleteStreetAdapter(@NonNull Context context, @LayoutRes int resource) {
         super(context, resource);
