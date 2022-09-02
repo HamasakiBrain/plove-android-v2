@@ -109,7 +109,7 @@ public class BagActivity extends AppCompatActivity {
 
             String mode = PreferenceManager.getDefaultSharedPreferences(BagActivity.this).getString(EXTRA_FROM, FROM_DELIVERY);
             if (mode.equalsIgnoreCase(FROM_DELIVERY)) {
-                if ((mItems.size() > 0) && (Integer.valueOf(tvPrice.getText().toString()) > 999)){
+                if ((mItems.size() > 0) && (Integer.parseInt(tvPrice.getText().toString()) > 2)){
                     Intent i = new Intent(BagActivity.this, OrderAddressActivity.class);
                     startActivity(i);
                 } else {
@@ -125,14 +125,14 @@ public class BagActivity extends AppCompatActivity {
                 }
             }
             if (mode.equalsIgnoreCase(FROM_TAKEAWAY)) {
-                if ((mItems.size() > 0) && (Integer.valueOf(tvPrice.getText().toString()) > 0)) {
+                if ((mItems.size() > 0) && (Integer.parseInt(tvPrice.getText().toString()) > 0)) {
                     Intent i = new Intent(BagActivity.this, OrderStep1Activity.class);
                     i.putExtra(OrderStep1Activity.EXTRA_ORDER, Parcels.wrap(order));
                     startActivity(i);
                 }
             }
             if (mode.equalsIgnoreCase(FROM_INCAFE)) {
-                if ((mItems.size() > 0) && (Integer.valueOf(tvPrice.getText().toString()) > 0)) {
+                if ((mItems.size() > 0) && (Integer.parseInt(tvPrice.getText().toString()) > 0)) {
                     Intent i = new Intent(BagActivity.this, OrderStep1Activity.class);
                     i.putExtra(OrderStep1Activity.EXTRA_ORDER, Parcels.wrap(order));
                     startActivity(i);
