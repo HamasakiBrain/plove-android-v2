@@ -73,9 +73,9 @@ public class RecyclerBagAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 
             if (mItem.image != null) {
                 Glide.with(mContext)
-                    .load(mItem.image.replace("https", "http"))
-                    .asBitmap()
-                    //.crossFade()
+                    .load(mItem.image)
+                    
+                    ////.crossFade()
                     //.fitCenter()
                         .centerCrop()
                     .placeholder(R.drawable.placeholder_small)

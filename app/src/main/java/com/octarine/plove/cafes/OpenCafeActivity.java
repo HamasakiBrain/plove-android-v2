@@ -38,8 +38,8 @@ public class OpenCafeActivity extends AppCompatActivity {
         ((TextView) findViewById(R.id.textViewCafeRegim)).setText(cafe.work_time);
 
         Glide.with(this)
-                .load(cafe.detailImage.android.replace("https", "http"))
-                .asBitmap()
+                .load(cafe.detailImage.android)
+                
                 .fitCenter()
                 .placeholder(R.drawable.big)
                 .into((ImageView) findViewById(R.id.imageViewCafeDetail));

@@ -3,6 +3,7 @@ package com.octarine.plove.menu;
 import android.content.Context;
 
 //import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -62,11 +63,12 @@ class RecyclerMenuItemsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
             holder.setPrice(mItem.price + " RUB");
 
             holder.mImageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+            Log.d("IMAGE", mItem.detailImage.size3x);
             if (mItem.image.android != null) {
                 Glide.with(mContext)
-                        .load(mItem.image.size3x.replace("https", "http"))
-                        //.asBitmap()
-                        .crossFade()
+                        .load(mItem.image.size3x)
+                        //
+                        //.crossFade()
                         .centerCrop()
                         //.fitCenter()
                         .placeholder(R.drawable.big)

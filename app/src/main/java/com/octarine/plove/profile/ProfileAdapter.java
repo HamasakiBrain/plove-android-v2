@@ -58,7 +58,7 @@ public class ProfileAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
             if (model.image.android != null) {
                 Glide.with(mContext)
                         .load(model.image.android)
-                        .crossFade()
+                        //.crossFade()
                         .placeholder(R.drawable.big)
                         .into(holder.mImage);
             }

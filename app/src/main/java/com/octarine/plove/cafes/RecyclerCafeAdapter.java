@@ -105,8 +105,8 @@ public class RecyclerCafeAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
             if (cafe.image.android != null) {
                 Glide.with(mContext)
                         .load(cafe.image.android)
-                        //.asBitmap()
-                        .crossFade()
+                        //
+                        //.crossFade()
                         //.fitCenter()
                         .placeholder(R.drawable.big)
                         .into(holder.mImageViewPreview);

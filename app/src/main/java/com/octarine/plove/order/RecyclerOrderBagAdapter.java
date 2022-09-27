@@ -62,8 +62,8 @@ public class RecyclerOrderBagAdapter extends RecyclerView.Adapter<RecyclerView.V
 
             if (mItem.image != null) {
                 Glide.with(mContext)
-                        .load(mItem.image.replace("https", "http"))
-                        .asBitmap()
+                        .load(mItem.image)
+                        
                         .fitCenter()
                         .placeholder(R.drawable.food_menu_placeholder)
                         .into(holder.mImageView);

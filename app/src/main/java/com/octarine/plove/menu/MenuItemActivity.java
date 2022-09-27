@@ -165,8 +165,8 @@ public class MenuItemActivity extends AppCompatActivity {
 
         saleImageView =  findViewById(R.id.imageViewItem);
         Glide.with(this)
-                .load(menuItem.detailImage.android.replace("https", "http"))
-                .asBitmap()
+                .load(menuItem.detailImage.android)
+                
                 .fitCenter()
                 .placeholder(R.drawable.open_food_placeholder)
                 .into(saleImageView);

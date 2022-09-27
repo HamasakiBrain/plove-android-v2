@@ -40,7 +40,7 @@ public class OpenSaleActivity extends AppCompatActivity {
         if (model.detailImage.android != null) {
             Glide.with(this)
                     .load(model.detailImage.android)
-                    .crossFade()
+                    //.crossFade()
                     .placeholder(R.drawable.big)
                     .into(cafeImageView);
         }
